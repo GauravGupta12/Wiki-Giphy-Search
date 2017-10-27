@@ -1,0 +1,27 @@
+<div class="page-header">
+    <div class="container">
+      <h1>Wiki-Giphy Search App</h1>
+      <div class="navLinks">
+        <a [routerLink]="['/home']">Home</a> |
+        <a [routerLink]="['/login']">Login</a> |
+        <a [routerLink]="['/register']">Register</a> |
+        <a [routerLink]="['/search-history']">Search History</a> |
+        <a [routerLink]="['/dashboard']">Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <span *ngIf="isLoggedIn()">
+        Welcome {{user}}
+  </span>
+  
+  <div id="content">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+
+
+

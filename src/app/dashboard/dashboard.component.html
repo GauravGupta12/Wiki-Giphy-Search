@@ -1,0 +1,16 @@
+
+<h2>Search</h2>
+<div style="width: fit-content;">
+  <input type="text" class="form-control" [(ngModel)]="searchItem" placeholder="Search.." />
+  <button type="button" class="btn btn-default" (click)="searchWiki()">Search Wiki</button>
+  <button type="button" class="btn btn-default" (click)="searchGiphy()">Search Giphy</button>
+</div>
+<br />
+<ul>
+  <li *ngFor="let searchResultsEntry of wikiSearchResults">{{ searchResultsEntry }}</li>
+</ul>
+<ul>
+  <li *ngFor="let searchResultsEntry of giphySearchResults">
+    <img src="{{ searchResultsEntry.images['fixed_height_downsampled'].url }}" />
+  </li>
+</ul>
